@@ -1,5 +1,6 @@
 ##CSS module
-  webpack.config.js
+```
+  webpack.config.js                                         
   {
     test: cssRegex,
     exclude: cssModuleRegex,
@@ -15,3 +16,4 @@
         localIdentName: '[name]__[local]__[hash:base64:5]'
     }),
   }
+```
