@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import classes from './Burger.css'
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
@@ -9,20 +9,20 @@ const burger = props =>{
             // create Array Array()
             // console.log(igKey); salad  bacon cheese meat
             // console.log(props.ingredients[igKey]); 1 1 2 2
-            console.log(props.ingredients[igKey]);
-            return [...Array(props.ingredients[igKey])].map((_, index) =>{
+            console.log("props.ingredients[igKey]"+props.ingredients[igKey]);
+            return [...Array(props.ingredients[igKey] )].map((_, index) =>{
                  console.log(igKey );
-                return <BurgerIngredient key ={igKey +index} type ={igKey}/>
+                console.log("length-"+Array(props.ingredients[igKey]).length);
+                return <BurgerIngredient key ={igKey +index} type ={igKey}/>;
             });//[,]
-        })
-        .reduce((aar, el) => {
+        }).reduce((aar, el) => {
             //console.log(aar.concat(el));
 
             return aar.concat(el);
         }, []);
 
     if(transformedIngredients.length===0){
-        transformedIngredients = <p> Please start adding ingredients</p>
+        transformedIngredients = <p> Please start adding ingredients</p>;
     }
     console.log(transformedIngredients);
     return(
