@@ -1,5 +1,7 @@
  # CSS module
 ```
+
+  npm run eject
   webpack.config.js                                         
   {
     test: cssRegex,
